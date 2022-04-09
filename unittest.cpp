@@ -64,7 +64,7 @@ int main() {
     c*2;
     Test(c.ToString() == "[-2, -2, -4]", "Correctly multiplies Vector by a factor of 2", passedTests);
     b*1.5;
-    Test(a.ToString() == "[-13.5, 1.5]", "Correctly multiplies Vector by factor of 1.5", passedTests);
+    Test(b.ToString() == "[-13.5, 1.5]", "Correctly multiplies Vector by factor of 1.5", passedTests);
     return 0;
 }
 
