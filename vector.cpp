@@ -188,3 +188,23 @@ const Vector Vector::operator+(const Vector &rhs) const {
 const Vector Vector::operator-(const Vector &rhs) const {
     return Sub(rhs);
 }
+
+ Vector Vector::operator-() const {
+
+    if (this->IsValid()) {
+        for (int i = 0; i < this->_size; i++) {
+            this->_data[i] = this->_data[i] * -1;
+        }
+    }
+   return *this;
+}
+
+Vector Vector::operator*(double val) const {
+    if (this->IsValid()) {
+        for (int i = 0; i < this->_size; i++) {
+            this->_data[i] = this->_data[i] * val;
+        }
+    }
+    return *this;
+}
+

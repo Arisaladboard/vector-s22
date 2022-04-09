@@ -48,10 +48,23 @@ int main() {
     cout << a[0] << endl;
     a[0] = 7;
     cout << a.ToString() << endl;
+//Tests for flipping the signs of the values in each vector
+    -a;
+    Test(a.ToString() == "[-7, -4]", "Correctly flips vector value signs", passedTests);
+    -c;
+    Test(c.ToString() =="[-1, -1, -2]", "Correctly changes vector value signs", passedTests );
+    -a;
+    Test(a.ToString() == "[7, 4]", "Correctly flips vector value signs", passedTests);
+    -b;
+    Test(b.ToString() == "[-9, 1]", "Correctly flips vector value signs", passedTests);
 
-
-
-
+    //Tests for multiplying the vectors by values
+    a*4;
+    Test(a.ToString() == "[28, 16]", "Correctly multiplies Vector by factor of 4", passedTests);
+    c*2;
+    Test(c.ToString() == "[-2, -2, -4]", "Correctly multiplies Vector by a factor of 2", passedTests);
+    b*1.5;
+    Test(a.ToString() == "[-13.5, 1.5]", "Correctly multiplies Vector by factor of 1.5", passedTests);
     return 0;
 }
 
